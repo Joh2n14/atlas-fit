@@ -1,6 +1,8 @@
-/* ATLAS Fit â€” cache hors ligne, incluant la nouvelle extension Nutrition. */
-const VERSION='atlas-fit-shell-v1.1.0-nutrition';
-const SHELL=['./','./index.html','./app.js','./data.js','./atlas-v3.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+/* ATLAS Fit â€” cache de la version Nutrition intuitive v4.
+ * Les appels Open Food Facts ne sont pas mis en cache par ce service worker.
+ */
+const VERSION='atlas-fit-shell-v1.2.0-nutrition-intuitive';
+const SHELL=['./','./index.html','./app.js','./data.js','./atlas-v3.js','./nutrition-smart.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
