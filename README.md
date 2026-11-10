@@ -1,12 +1,13 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.3 — Novembre 2026
+Version 1.3.1 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
 ## Fonctionnalités
 
 - 84 exercices couvrant 10 groupes musculaires, avec conseils techniques, recherche, filtres et favoris.
+- Huit démonstrations animées dans la bibliothèque, disponibles hors ligne. Les positions de départ et de fin sont affichées côte à côte si la réduction des animations est activée.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
 - Séances actives : charges en kg, répétitions ou secondes, séries validées, notes et minuteur de repos.
@@ -22,14 +23,14 @@ L'application utilise des fichiers HTML, CSS et JavaScript statiques. Aucun serv
 1. Créer un compte gratuit sur [github.com](https://github.com/) (si nécessaire).
 2. Créer un nouveau dépôt **public** nommé `atlas-fit` (sur GitHub Free, Pages nécessite un dépôt public).
 3. Décompresser l'archive ZIP de l'application.
-4. Sur GitHub, ouvrir le dépôt puis cliquer **Add file → Upload files**. Transférer les fichiers de l’archive à la racine du dépôt, dont `index.html`, `app.js`, `data.js`, `atlas-v3.js`, `nutrition-smart.js`, `manifest.webmanifest`, `sw.js` et les deux icônes.
+4. Sur GitHub, ouvrir le dépôt puis cliquer **Add file → Upload files**. Transférer les fichiers de l’archive à la racine du dépôt, dont `index.html`, `app.js`, `data.js`, `exercise-demos.js`, `atlas-v3.js`, `nutrition-smart.js`, `manifest.webmanifest`, `sw.js` et les deux icônes.
 5. Valider le téléversement avec **Commit changes**.
 6. Ouvrir **Settings → Pages → Build and deployment**. Sous **Source**, choisir **Deploy from a branch**, puis sélectionner **main** et **/(root)**, puis **Save**.
 7. Ouvrir l'URL HTTPS affichée dans **Settings → Pages → Visit site** après publication.
 8. Sur iPhone ou iPad, ouvrir cette URL dans **Safari**, puis **Partager → Sur l'écran d'accueil → Ajouter**. Selon iOS, choisir éventuellement **Ouvrir comme app web**.
 9. Lancer ATLAS Fit depuis son icône. Créer son profil et son programme.
 
-Pour mettre à jour la version GitHub existante du 10 novembre 2026, remplacer `nutrition-smart.js`, `sw.js` et `README.md` à la racine du dépôt. Conserver la même adresse de publication pour retrouver les données locales.
+Pour passer de la version 1.3 à la version 1.3.1, ajouter `exercise-demos.js` et remplacer `index.html`, `app.js`, `sw.js` et `README.md` à la racine du dépôt. Conserver la même adresse de publication pour retrouver les données locales.
 
 Documentation officielle :
 - [GitHub — Créer un site GitHub Pages](https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site)
