@@ -1,8 +1,8 @@
 /* ATLAS Fit — cache de l’application.
  * Les appels Open Food Facts ne sont pas mis en cache par ce service worker.
  */
-const VERSION='atlas-fit-shell-v1.3.1-exercise-demos';
-const SHELL=['./','./index.html','./app.js','./data.js','./exercise-demos.js','./atlas-v3.js','./nutrition-smart.js','./manifest.webmanifest','./icon-192.png','./icon-512.png'];
+const VERSION='atlas-fit-shell-v1.3.2-gif';
+const SHELL=["./", "./index.html", "./app.js", "./data.js", "./exercise-demos.js", "./atlas-v3.js", "./nutrition-smart.js", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
@@ -11,6 +11,14 @@ self.addEventListener('activate',event=>{
 });
 self.addEventListener('fetch',event=>{
   if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;
+  if(new URL(event.request.url).pathname.includes('/media/exercises/')){
+    event.respondWith(caches.open(VERSION).then(async cache=>{
+      const cached=await cache.match(event.request); if(cached)return cached;
+      const response=await fetch(event.request);
+      if(response.ok)await cache.put(event.request,response.clone()).catch(()=>{});
+      return response;
+    }));return;
+  }
   event.respondWith(fetch(event.request).then(response=>{
     if(response.ok){const copy=response.clone();caches.open(VERSION).then(cache=>cache.put(event.request,copy));}
     return response;

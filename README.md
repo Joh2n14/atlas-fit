@@ -1,13 +1,14 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.3.1 — Novembre 2026
+Version 1.3.2 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
 ## Fonctionnalités
 
-- 84 exercices couvrant 10 groupes musculaires, avec conseils techniques, recherche, filtres et favoris.
-- Huit démonstrations animées dans la bibliothèque, disponibles hors ligne. Les positions de départ et de fin sont affichées côte à côte si la réduction des animations est activée.
+- 92 exercices : 84 mouvements de musculation et 8 mouvements du programme « Après mon bébé », avec conseils, recherche, filtres et favoris.
+- 92 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
+- Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
 - Séances actives : charges en kg, répétitions ou secondes, séries validées, notes et minuteur de repos.
@@ -23,14 +24,14 @@ L'application utilise des fichiers HTML, CSS et JavaScript statiques. Aucun serv
 1. Créer un compte gratuit sur [github.com](https://github.com/) (si nécessaire).
 2. Créer un nouveau dépôt **public** nommé `atlas-fit` (sur GitHub Free, Pages nécessite un dépôt public).
 3. Décompresser l'archive ZIP de l'application.
-4. Sur GitHub, ouvrir le dépôt puis cliquer **Add file → Upload files**. Transférer les fichiers de l’archive à la racine du dépôt, dont `index.html`, `app.js`, `data.js`, `exercise-demos.js`, `atlas-v3.js`, `nutrition-smart.js`, `manifest.webmanifest`, `sw.js` et les deux icônes.
+4. Sur GitHub, ouvrir le dépôt puis cliquer **Add file → Upload files**. Transférer les fichiers de l’archive à la racine du dépôt, dont `index.html`, `app.js`, `data.js`, `exercise-demos.js`, `atlas-v3.js`, `nutrition-smart.js`, `manifest.webmanifest`, `sw.js` les deux icônes et le dossier complet `media/exercises/` (92 GIF et 92 images PNG).
 5. Valider le téléversement avec **Commit changes**.
 6. Ouvrir **Settings → Pages → Build and deployment**. Sous **Source**, choisir **Deploy from a branch**, puis sélectionner **main** et **/(root)**, puis **Save**.
 7. Ouvrir l'URL HTTPS affichée dans **Settings → Pages → Visit site** après publication.
 8. Sur iPhone ou iPad, ouvrir cette URL dans **Safari**, puis **Partager → Sur l'écran d'accueil → Ajouter**. Selon iOS, choisir éventuellement **Ouvrir comme app web**.
 9. Lancer ATLAS Fit depuis son icône. Créer son profil et son programme.
 
-Pour passer de la version 1.3 à la version 1.3.1, ajouter `exercise-demos.js` et remplacer `index.html`, `app.js`, `sw.js` et `README.md` à la racine du dépôt. Conserver la même adresse de publication pour retrouver les données locales.
+Pour mettre à jour une installation existante, transférer le dossier `media/` et remplacer `exercise-demos.js`, `index.html`, `app.js`, `sw.js` et `README.md`. Conserver la même adresse de publication pour retrouver les données locales. La clé de sauvegarde reste inchangée. Fermer puis rouvrir l’application après la mise à jour.
 
 Documentation officielle :
 - [GitHub — Créer un site GitHub Pages](https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site)
@@ -70,7 +71,7 @@ La recherche textuelle utilise le point d’accès historique documenté `/cgi/s
 
 ## Limites de cette première version
 
-- Pas de vidéos ni animations des exercices ; les indications sont textuelles.
+- Les GIF sont des illustrations en quelques poses, avec des transitions saccadées. Ils ne sont pas des captures vidéo ni une simulation biomécanique. Les contractions internes sont repérées par une lueur discrète.
 - Pas de synchronisation cloud, compte, Apple Santé, Apple Watch ou notifications push.
 - Le poids corporel est suivi mais **ne sert pas à déduire automatiquement la charge** adaptée à chaque exercice.
 - La durée visée des séances est indicative et non garantie par la longueur du programme.
@@ -87,6 +88,9 @@ Le programme est une proposition pratique conçue pour ATLAS Fit, pas la reprodu
 
 - `index.html` : interface et CSS responsive
 - `data.js` : bibliothèque d'exercices
+- `exercise-demos.js` : association des 92 médias aux exercices et lecture/arrêt
+- `media/exercises/` : GIF animés et images fixes
+- `atlas-v3.js` : programme post-partum et extensions de l’application
 - `app.js` : gestion du programme, séances, historique et statistiques
 - `manifest.webmanifest` : installation en application web
 - `sw.js` : ressources accessibles hors ligne

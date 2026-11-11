@@ -1,0 +1,13 @@
+ATLAS Fit 1.3.2 — 92 GIF 3D
+
+Dans la bibliothèque, touche un aperçu ou « Démo et détails », puis « Lire l’animation ». Le même bouton permet de revenir à l’image fixe.
+
+Pour actualiser ton application publiée :
+1. Décompresse cette archive.
+2. Transfère le contenu du dossier ATLAS-Fit-1.3.2-GIF dans le dépôt de ton application, à la place des fichiers précédents, avec le dossier media complet. Ne transfère pas le ZIP lui-même.
+3. Conserve la même adresse de publication pour retrouver tes données locales.
+4. Après publication, ferme puis rouvre l’application.
+
+Le dossier media/exercises contient 92 GIF et 92 aperçus PNG. L’application charge les GIF uniquement à la demande et conserve les médias consultés pour le hors-ligne lorsque le stockage le permet.
+
+Aucun abonnement ou service de génération payant n’a été ajouté à l’application.

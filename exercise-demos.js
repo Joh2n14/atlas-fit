@@ -100,7 +100,110 @@ function exerciseDemoSvg(demo, poseIndex, animated) {
   </svg>`;
 }
 
+const EXERCISE_MEDIA = {
+  "abduction-machine": "media/exercises/abduction-machine",
+  "anges-neige": "media/exercises/anges-neige",
+  "barre-front": "media/exercises/barre-front",
+  "bicycle-crunch": "media/exercises/bicycle-crunch",
+  "bird-dog": "media/exercises/bird-dog",
+  "bulgare": "media/exercises/bulgare",
+  "chest-press": "media/exercises/chest-press",
+  "crunch": "media/exercises/crunch",
+  "curl-barre": "media/exercises/curl-barre",
+  "curl-concentration": "media/exercises/curl-concentration",
+  "curl-elastique": "media/exercises/curl-elastique",
+  "curl-halteres": "media/exercises/curl-halteres",
+  "curl-incline": "media/exercises/curl-incline",
+  "curl-marteau": "media/exercises/curl-marteau",
+  "curl-pupitre": "media/exercises/curl-pupitre",
+  "dead-bug": "media/exercises/dead-bug",
+  "developpe-couche": "media/exercises/developpe-couche",
+  "developpe-halteres": "media/exercises/developpe-halteres",
+  "developpe-incline": "media/exercises/developpe-incline",
+  "developpe-militaire": "media/exercises/developpe-militaire",
+  "developpe-militaire-barre": "media/exercises/developpe-militaire-barre",
+  "dips": "media/exercises/dips",
+  "dips-banc": "media/exercises/dips-banc",
+  "ecartes-halteres": "media/exercises/ecartes-halteres",
+  "elevations-elastique": "media/exercises/elevations-elastique",
+  "elevations-laterales": "media/exercises/elevations-laterales",
+  "extension-elastique": "media/exercises/extension-elastique",
+  "extension-lombaire": "media/exercises/extension-lombaire",
+  "extension-nuque": "media/exercises/extension-nuque",
+  "extension-poulie": "media/exercises/extension-poulie",
+  "extension-quads": "media/exercises/extension-quads",
+  "face-pull": "media/exercises/face-pull",
+  "fentes": "media/exercises/fentes",
+  "fentes-halteres": "media/exercises/fentes-halteres",
+  "floor-press": "media/exercises/floor-press",
+  "frog-pumps": "media/exercises/frog-pumps",
+  "front-squat": "media/exercises/front-squat",
+  "hip-thrust": "media/exercises/hip-thrust",
+  "hip-thrust-halteres": "media/exercises/hip-thrust-halteres",
+  "kickback": "media/exercises/kickback",
+  "kickback-poulie": "media/exercises/kickback-poulie",
+  "leg-curl-assis": "media/exercises/leg-curl-assis",
+  "leg-curl-couche": "media/exercises/leg-curl-couche",
+  "leg-curl-elastique": "media/exercises/leg-curl-elastique",
+  "leg-curl-serviette": "media/exercises/leg-curl-serviette",
+  "marche-laterale": "media/exercises/marche-laterale",
+  "mollets-assis": "media/exercises/mollets-assis",
+  "mollets-corps": "media/exercises/mollets-corps",
+  "mollets-debout": "media/exercises/mollets-debout",
+  "mollets-halteres": "media/exercises/mollets-halteres",
+  "mountain-climbers": "media/exercises/mountain-climbers",
+  "oiseau-halteres": "media/exercises/oiseau-halteres",
+  "pallof": "media/exercises/pallof",
+  "pec-deck": "media/exercises/pec-deck",
+  "pike-pushups": "media/exercises/pike-pushups",
+  "planche": "media/exercises/planche",
+  "planche-laterale": "media/exercises/planche-laterale",
+  "pompes": "media/exercises/pompes",
+  "pompes-inclinees": "media/exercises/pompes-inclinees",
+  "pompes-serrees": "media/exercises/pompes-serrees",
+  "pont-fessier": "media/exercises/pont-fessier",
+  "pont-jambes": "media/exercises/pont-jambes",
+  "postpartum-genou": "media/exercises/postpartum-genou",
+  "postpartum-marche": "media/exercises/postpartum-marche",
+  "postpartum-pelvien": "media/exercises/postpartum-pelvien",
+  "postpartum-perinee": "media/exercises/postpartum-perinee",
+  "postpartum-pont": "media/exercises/postpartum-pont",
+  "postpartum-respiration": "media/exercises/postpartum-respiration",
+  "postpartum-talon": "media/exercises/postpartum-talon",
+  "postpartum-transverse": "media/exercises/postpartum-transverse",
+  "presse-cuisses": "media/exercises/presse-cuisses",
+  "pullover": "media/exercises/pullover",
+  "releves-genoux": "media/exercises/releves-genoux",
+  "rowing-barre": "media/exercises/rowing-barre",
+  "rowing-double": "media/exercises/rowing-double",
+  "rowing-elastique": "media/exercises/rowing-elastique",
+  "rowing-halteres": "media/exercises/rowing-halteres",
+  "rowing-poulie": "media/exercises/rowing-poulie",
+  "russian-twist": "media/exercises/russian-twist",
+  "sdtr-barre": "media/exercises/sdtr-barre",
+  "sdtr-halteres": "media/exercises/sdtr-halteres",
+  "shoulder-press": "media/exercises/shoulder-press",
+  "squat-barre": "media/exercises/squat-barre",
+  "squat-corps": "media/exercises/squat-corps",
+  "squat-goblet": "media/exercises/squat-goblet",
+  "step-up": "media/exercises/step-up",
+  "superman": "media/exercises/superman",
+  "tirage-elastique": "media/exercises/tirage-elastique",
+  "tirage-vertical": "media/exercises/tirage-vertical",
+  "traction-assistee": "media/exercises/traction-assistee",
+  "tractions": "media/exercises/tractions",
+  "ytw": "media/exercises/ytw"
+};
+
 function exerciseDemo(ex) {
+  const media = EXERCISE_MEDIA[ex.id];
+  if (media) return `<section class="exercise-demo exercise-demo-3d" aria-label="Démonstration du mouvement">
+    <div class="exercise-demo-header"><h3>Démonstration 3D</h3>
+      <button type="button" class="btn small secondary exercise-demo-toggle" data-act="toggle-exercise-demo" aria-pressed="false">Lire l’animation</button>
+    </div>
+    <img class="exercise-demo-image" src="${media}.png" data-still="${media}.png" data-animation="${media}.gif" alt="${esc(ex.name)} — démonstration 3D" width="724" height="543" decoding="async">
+    ${['postpartum-perinee','postpartum-transverse'].includes(ex.id)?'<p class="muted">La lueur orange repère la zone sollicitée. La contraction interne reste discrète, sans grand mouvement du corps.</p>':''}
+  </section>`;
   const demo = EXERCISE_DEMOS[ex.id];
   if (!demo) return '';
   return `<section class="exercise-demo" aria-label="Démonstration du mouvement">
@@ -119,6 +222,13 @@ function exerciseDemo(ex) {
 function toggleExerciseDemo(button) {
   const demo = button.closest('.exercise-demo');
   const playing = button.getAttribute('aria-pressed') === 'true';
+  const image = demo.querySelector('.exercise-demo-image');
+  if (image) {
+    image.src = playing ? image.dataset.still : image.dataset.animation;
+    button.setAttribute('aria-pressed', String(!playing));
+    button.textContent = playing ? 'Lire l’animation' : 'Arrêter l’animation';
+    return;
+  }
   for (const animation of demo.querySelectorAll('animate, animateTransform')) {
     if (playing) animation.endElement();
     else animation.beginElement();
