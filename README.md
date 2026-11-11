@@ -8,7 +8,7 @@ Cette application est **gratuite**, sans abonnement, sans publicité, sans compt
 
 - 92 exercices : 84 mouvements de musculation et 8 mouvements du programme « Après mon bébé », avec conseils, recherche, filtres et favoris.
 - 92 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
-- Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée.
+- Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée au départ et la lecture manuelle reste disponible.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
 - Séances actives : charges en kg, répétitions ou secondes, séries validées, notes et minuteur de repos.
