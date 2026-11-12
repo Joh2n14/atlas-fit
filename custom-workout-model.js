@@ -8,7 +8,7 @@ const CustomWorkout = (() => {
   const number = v => Number(String(v).replace(',','.'));
   const bounded = (v,min,max,fallback) => Number.isFinite(number(v)) ? Math.min(max,Math.max(min,number(v))) : fallback;
   function equipment(ex) {
-    const count=ex.gear==='halteres'?(singleDumbbell.has(ex.id)?1:2):['barre','machine','poulie'].includes(ex.gear)?1:0;
+    const count=ex.gear==='halteres'?(singleDumbbell.has(ex.id)?1:2):['barre','machine','poulie','kettlebell'].includes(ex.gear)?1:0;
     return {count,assistance:ex.id==='traction-assistee',dumbbell:ex.gear==='halteres'};
   }
   function repetitionLabel(ex) {

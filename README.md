@@ -1,13 +1,13 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.4.1 — Novembre 2026
+Version 1.5 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
 ## Fonctionnalités
 
-- 92 exercices : 84 mouvements de musculation et 8 mouvements du programme « Après mon bébé », avec conseils, recherche, filtres et favoris.
-- 92 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
+- 100 exercices : 84 mouvements de musculation, 8 mouvements du programme « Après mon bébé » et 8 nouveaux mouvements CrossFit, avec conseils, recherche, filtres et favoris.
+- 100 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
 - Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée au départ et la lecture manuelle reste disponible.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
@@ -28,6 +28,18 @@ Le bilan et l’historique conservent durée, séries et volume externe (charges
 Les squats, fentes et montées sur marche proposent une hauteur de remontée réglable en centimètres. Hauteur × répétitions validées donne une montée verticale cumulée estimée, pas une mesure d’altitude. Les hauteurs manquantes sont signalées et exclues.
 
 Les options du bilan sont automatiques. Le genre suit le profil enregistré, masculin par défaut. Quatre images fixes de célébration : versions masculine et féminine avec bras fléchis et halo orange quand toutes les séries sont validées ; applaudissement et halo vert discret si la séance est partielle. Aucune zone musculaire colorée. La sélection des exercices met uniquement les réglages à jour et conserve la liste et sa position à l’écran.
+
+## CrossFit
+
+Cinq séances : Cindy, Annie, Helen, Fran et Grace. Chaque fiche présente durée indicative (hors échauffement), matériel, répétitions, tours et charges modifiables. Les standards sont documentés sur les pages officielles https://www.crossfit.com/benchmark/cindy, /annie, /helen, /fran et /grace. Les charges en livres sont converties et arrondies en kilogrammes.
+
+La variante « Adaptée ATLAS » est une proposition distincte de la référence. Cindy utilise 12 minutes et 3 tirages aux anneaux / 6 pompes inclinées / 9 squats ; Annie 35–25–15–10–5 sauts simples et sit-ups ; Helen 3 tours de 200 m / 15 swings à 12 ou 8 kg / 9 tirages aux anneaux ; Fran 21–15–9 thrusters à 20 ou 15 kg et tirages aux anneaux ; Grace 30 épaulés-jetés à 35 ou 25 kg. Les repères masculins et féminins restent modifiables.
+
+Cindy utilise un compte à rebours (20 ou 12 minutes) avec score en tours et répétitions. Les quatre autres utilisent un chronomètre, arrêté à la validation du dernier mouvement. Saisie fractionnée, annulation de la dernière saisie, pause persistante, reprise après fermeture et arrêt anticipé avec bilan partiel. Les distances sont déclarées, pas mesurées par GPS. Les bilans conservent variante, charges, répétitions, distances et volume externe dans l’historique. Comparer des variantes et charges identiques.
+
+Le bouton Réinitialisation, en haut à droite, efface la sélection et rétablit les réglages ; il ne supprime ni l’historique ni une séance en cours. La bibliothèque propose « Spécial CrossFit » : 12 mouvements, dont 8 nouveaux GIF et leurs aperçus. Les GIF illustrent quelques poses ; ils ne reproduisent pas une cadence réelle et ne remplacent pas l’apprentissage des gestes techniques.
+
+Fichiers : crossfit-data.js (données et calculs), crossfit.js (parcours), crossfit.css (mise en page). Les nouveaux mouvements ne sont pas introduits automatiquement dans les plans classiques générés.
 
 ## Installation gratuite iPhone / iPad avec GitHub Pages
 
