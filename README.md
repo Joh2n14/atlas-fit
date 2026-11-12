@@ -1,6 +1,6 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.4 — Novembre 2026
+Version 1.4.1 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
@@ -19,15 +19,15 @@ Cette application est **gratuite**, sans abonnement, sans publicité, sans compt
 
 ## Ma séance personnalisée
 
-Dans Entraînement, entre Musculation classique et Après mon bébé : sélection multiple des muscles et exercices, ordre modifiable, séries, répétitions, repos et cadence. Aucun profil ni durée cible obligatoire. Les réglages sont mémorisés sur cet appareil.
+Dans Entraînement, entre Musculation classique et Après mon bébé : sélection multiple des muscles et exercices, ordre modifiable, séries, répétitions, repos. La durée prévisionnelle repose sur 3 secondes par répétition. Aucun profil ni durée cible obligatoire. Les réglages sont mémorisés sur cet appareil.
 
-Chaque série avec charge demande les poids, séparément pour chaque haltère. « Passer » garde les valeurs précédentes ; une charge inconnue reste non renseignée. Seules les séries validées comptent dans le bilan. Le chronomètre continue pendant les repos et interruptions, même après fermeture et reprise.
+Chaque série avec charge demande les poids, séparément pour chaque haltère. « Passer » garde les valeurs précédentes ; une charge inconnue reste non renseignée. Seules les séries validées comptent dans le bilan. Le chronomètre continue pendant les repos. Le bouton Pause suspend le chronomètre et le repos, y compris après fermeture ; Reprendre les relance. Les boutons Fin de l’entraînement et Pause sont sous l’exercice en cours, les notes restent à la fin.
 
-Le bilan et l’historique conservent durée, séries et volume externe (charges × répétitions, hors poids du corps, assistance et exercices chronométrés). Les calories sont une estimation globale à 3,5 MET, repos compris : MET × 3,5 × poids corporel / 200 × minutes. Sans poids, aucune estimation. Référence : [Compendium 2024, activité 02054](https://pacompendium.com/wp-content/uploads/2024/01/2024-adult-compendium_1_2024.pdf). Ce calcul ne mesure pas la dépense réelle individuelle.
+Le bilan et l’historique conservent durée, séries et volume externe (charges × répétitions, hors poids du corps, assistance et exercices chronométrés). Les calories sont une estimation globale à 3,5 MET, repos compris : MET × 3,5 × poids corporel / 200 × minutes (pauses explicites exclues). Le poids est récupéré automatiquement du profil (ou du dernier relevé disponible). Sans poids enregistré, aucune estimation. Référence : [Compendium 2024, activité 02054](https://pacompendium.com/wp-content/uploads/2024/01/2024-adult-compendium_1_2024.pdf). Ce calcul ne mesure pas la dépense réelle individuelle.
 
 Les squats, fentes et montées sur marche proposent une hauteur de remontée réglable en centimètres. Hauteur × répétitions validées donne une montée verticale cumulée estimée, pas une mesure d’altitude. Les hauteurs manquantes sont signalées et exclues.
 
-Deux GIF de célébration suivent le genre enregistré dans le profil nutritionnel, avec choix facultatif dans les options du bilan. La lecture manuelle reste possible lorsque la réduction des animations est activée.
+Les options du bilan sont automatiques. Le genre suit le profil enregistré, masculin par défaut. Quatre images fixes de célébration : versions masculine et féminine avec bras fléchis et halo orange quand toutes les séries sont validées ; applaudissement et halo vert discret si la séance est partielle. Aucune zone musculaire colorée. La sélection des exercices met uniquement les réglages à jour et conserve la liste et sa position à l’écran.
 
 ## Installation gratuite iPhone / iPad avec GitHub Pages
 
