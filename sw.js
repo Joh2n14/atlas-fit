@@ -1,7 +1,7 @@
 /* ATLAS Fit — cache de l’application.
  * Les appels Open Food Facts ne sont pas mis en cache par ce service worker.
  */
-const VERSION='atlas-fit-shell-v1.5-crossfit';
+const VERSION='atlas-fit-shell-v1.6-crossfit';
 const SHELL=["./", "./index.html", "./app.js", "./data.js", "./exercise-demos.js", "./atlas-v3.js", "./nutrition-smart.js", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./custom-workout.css", "./custom-workout-model.js", "./custom-workout.js", "./crossfit.css", "./crossfit-data.js", "./crossfit.js"];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));

@@ -1,13 +1,13 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.5 — Novembre 2026
+Version 1.6 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
 ## Fonctionnalités
 
-- 100 exercices : 84 mouvements de musculation, 8 mouvements du programme « Après mon bébé » et 8 nouveaux mouvements CrossFit, avec conseils, recherche, filtres et favoris.
-- 100 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
+- 103 exercices : 84 mouvements de musculation, 8 mouvements du programme « Après mon bébé » et 11 nouveaux mouvements CrossFit, avec conseils, recherche, filtres et favoris.
+- 103 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
 - Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée au départ et la lecture manuelle reste disponible.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
@@ -31,7 +31,7 @@ Les options du bilan sont automatiques. Le genre suit le profil enregistré, mas
 
 ## CrossFit
 
-Cinq séances : Cindy, Annie, Helen, Fran et Grace. Chaque fiche présente durée indicative (hors échauffement), matériel, répétitions, tours et charges modifiables. Les standards sont documentés sur les pages officielles https://www.crossfit.com/benchmark/cindy, /annie, /helen, /fran et /grace. Les charges en livres sont converties et arrondies en kilogrammes.
+Dix séances : Cindy, Annie, Helen, Fran, Grace, Jackie, Karen, Nancy, Angie et Barbara. Chaque fiche présente durée indicative (hors échauffement), matériel, répétitions, tours et charges modifiables. Les standards sont documentés sur les pages officielles https://www.crossfit.com/benchmark/cindy, /annie, /helen, /fran, /grace, /jackie, /karen, /nancy, /angie et /barbara. Les charges en livres sont converties et arrondies en kilogrammes.
 
 La variante « Adaptée ATLAS » est une proposition distincte de la référence. Cindy utilise 12 minutes et 3 tirages aux anneaux / 6 pompes inclinées / 9 squats ; Annie 35–25–15–10–5 sauts simples et sit-ups ; Helen 3 tours de 200 m / 15 swings à 12 ou 8 kg / 9 tirages aux anneaux ; Fran 21–15–9 thrusters à 20 ou 15 kg et tirages aux anneaux ; Grace 30 épaulés-jetés à 35 ou 25 kg. Les repères masculins et féminins restent modifiables.
 
@@ -124,3 +124,5 @@ Le programme est une proposition pratique conçue pour ATLAS Fit, pas la reprodu
 - `.nojekyll` : hébergement statique GitHub Pages
 
 Aucune bibliothèque externe, aucun service payant et aucune clé API.
+
+Barbara : repos automatique de 180 secondes entre les tours (4 repos en référence, 2 en adaptée), aucun après le dernier. La pause fige aussi le repos. Le bilan sépare temps total et temps d’effort hors repos imposés ; les récupérations libres restent comprises dans le temps d’effort. Karen indique la hauteur de cible selon la version et le repère de charge. Les estimations ATLAS ne sont pas des limites de temps officielles.

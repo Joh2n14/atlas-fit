@@ -1,7 +1,10 @@
 'use strict';
-// Références : crossfit.com/benchmark/{cindy,annie,helen,fran,grace}.
+// Références : crossfit.com/benchmark/{cindy,annie,helen,fran,grace,jackie,karen,nancy,angie,barbara}.
 // Les variantes adaptées sont des propositions ATLAS, non des standards de score Rx.
 const CF_EXERCISES=[
+ {id:'cf-row',name:'Rameur',muscle:'Dos',gear:'rameur',type:'poly',unit:'sec',tip:'Pousse avec les jambes, ouvre légèrement le buste puis tire la poignée vers le bas de la poitrine. Au retour, tends les bras avant de plier les jambes. Dans CrossFit, valide les mètres affichés ; dans une séance libre, saisis la durée en secondes.'},
+ {id:'cf-wall-ball',name:'Wall-ball',muscle:'Quadriceps',gear:'wallball',type:'poly',unit:'rep',tip:'Ballon devant la poitrine, descends en squat puis pousse avec les jambes pour lancer le ballon vers la cible. Réceptionne-le à deux mains et amortis en repartant en squat. Respecte la hauteur indiquée dans la séance.'},
+ {id:'cf-overhead-squat',name:'Squat avec barre au-dessus de la tête',muscle:'Quadriceps',gear:'barre',type:'poly',unit:'rep',tip:'Prise large, bras tendus, barre stabilisée au-dessus du milieu des pieds. Descends en squat en gardant les talons au sol et le tronc gainé. Privilégie une charge légère et une amplitude contrôlée.'},
  {id:'cf-thruster',name:'Thruster à la barre',muscle:'Quadriceps',gear:'barre',type:'poly',unit:'rep',tip:'Barre devant les épaules, effectue un squat puis prolonge la poussée des jambes jusqu’à tendre les bras au-dessus de la tête. Garde les talons stables et le tronc gainé.'},
  {id:'cf-clean-jerk',name:'Épaulé-jeté en puissance',muscle:'Épaules',gear:'barre',type:'poly',unit:'rep',tip:'Décolle la barre près du corps, réceptionne-la sur les épaules avec une légère flexion, puis utilise une nouvelle impulsion des jambes pour la stabiliser au-dessus de la tête. Apprends le mouvement à charge légère avant de le chronométrer.'},
  {id:'cf-swing',name:'Swing américain avec kettlebell',muscle:'Fessiers',gear:'kettlebell',type:'poly',unit:'rep',tip:'Recule les hanches, dos neutre, puis propulse la kettlebell avec les hanches. Accompagne-la au-dessus de la tête sans creuser le dos. Adapte la charge et l’amplitude à ton contrôle.'},
@@ -11,7 +14,7 @@ const CF_EXERCISES=[
  {id:'cf-run',name:'Course à pied',muscle:'Quadriceps',gear:'course',type:'poly',unit:'sec',tip:'Cours à une allure régulière sur un parcours mesuré. Dans CrossFit, valide les mètres réellement parcourus ; dans une séance classique ou libre, saisis la durée en secondes.'},
  {id:'cf-ring-row',name:'Tirage aux anneaux',muscle:'Dos',gear:'anneaux',type:'poly',unit:'rep',tip:'Anneaux fixés solidement, corps aligné et pieds au sol. Tire la poitrine vers les anneaux puis tends les bras avec contrôle. Redresse le corps pour diminuer la difficulté.'}
 ];
-Object.assign(GEAR_NAMES,{kettlebell:'Kettlebell',corde:'Corde à sauter',course:'Parcours de course',anneaux:'Anneaux de gymnastique'});
+Object.assign(GEAR_NAMES,{kettlebell:'Kettlebell',corde:'Corde à sauter',course:'Parcours de course',anneaux:'Anneaux de gymnastique',rameur:'Rameur',wallball:'Ballon lesté et cible murale'});
 for(const ex of CF_EXERCISES){if(!EXERCISES.some(e=>e.id===ex.id))EXERCISES.push(ex);EXERCISE_MEDIA[ex.id]='media/exercises/'+ex.id;}
 const CF_LIBRARY_IDS=new Set([...CF_EXERCISES.map(e=>e.id),'tractions','pompes','pompes-inclinees','squat-corps']);
 const CF_WORKOUTS=[
@@ -19,7 +22,12 @@ const CF_WORKOUTS=[
  {id:'annie',name:'Annie',tag:'Coordination · Sangle abdominale',format:'time',rounds:[50,40,30,20,10],scaledRounds:[35,25,15,10,5],hint:'Repère : 10–12 min',scaledHint:'Repère : 10–12 min',gear:'Corde à sauter, tapis ; coussin abdominal facultatif',rx:[['cf-double-under','round'],['cf-situp','round']],scaled:[['cf-single-under','round'],['cf-situp','round']]},
  {id:'helen',name:'Helen',tag:'Course · Force-endurance',format:'time',rounds:[1,1,1],hint:'Repère : moins de 15 min',scaledHint:'Repère : moins de 15 min',gear:'Parcours de 400 m, kettlebell, barre de traction',scaledGear:'Parcours de 200 m, kettlebell, anneaux',rx:[['cf-run',400,'m'],['cf-swing',21,'rep',24,16],['tractions',12]],scaled:[['cf-run',200,'m'],['cf-swing',15,'rep',12,8],['cf-ring-row',9]]},
  {id:'fran',name:'Fran',tag:'Barre · Tractions',format:'time',rounds:[21,15,9],hint:'Repère : jusqu’à 10–12 min',scaledHint:'Repère : jusqu’à 10–12 min',gear:'Barre, disques, barre de traction',scaledGear:'Barre, disques, anneaux',rx:[['cf-thruster','round','rep',43,29.5],['tractions','round']],scaled:[['cf-thruster','round','rep',20,15],['cf-ring-row','round']]},
- {id:'grace',name:'Grace',tag:'Haltérophilie · Puissance',format:'time',rounds:[1],hint:'Repère : moins de 7 min',scaledHint:'Repère : moins de 7 min',gear:'Barre et disques',rx:[['cf-clean-jerk',30,'rep',61,43]],scaled:[['cf-clean-jerk',30,'rep',35,25]]}
+ {id:'grace',name:'Grace',tag:'Haltérophilie · Puissance',format:'time',rounds:[1],hint:'Repère : moins de 7 min',scaledHint:'Repère : moins de 7 min',gear:'Barre et disques',rx:[['cf-clean-jerk',30,'rep',61,43]],scaled:[['cf-clean-jerk',30,'rep',35,25]]},
+ {id:'jackie',name:'Jackie',tag:'Rameur · Barre · Tractions',format:'time',rounds:[1],hint:'Repère : moins de 12 min',scaledHint:'Estimation ATLAS : 8–15 min',gear:'Rameur, barre, barre de traction',scaledGear:'Rameur, barre, anneaux',rx:[['cf-row',1000,'m'],['cf-thruster',50,'rep',20.4,15.9],['tractions',30]],scaled:[['cf-row',800,'m'],['cf-thruster',30,'rep',15,10],['cf-ring-row',20]]},
+ {id:'karen',name:'Karen',tag:'Ballon lesté · Endurance',format:'time',rounds:[1],hint:'Repère : 10–12 min',scaledHint:'Estimation ATLAS : 6–12 min',gear:'Ballon lesté et cible murale',target:[3.05,2.74],scaledTarget:[2.7,2.4],rx:[['cf-wall-ball',150,'rep',9.1,6.4]],scaled:[['cf-wall-ball',75,'rep',6,4]]},
+ {id:'nancy',name:'Nancy',tag:'Course · Squat barre haute',format:'time',rounds:[1,1,1,1,1],hint:'Repère : 17–20 min ou moins',scaledHint:'Estimation ATLAS : 12–20 min',gear:'Parcours de 400 m, barre et disques',scaledGear:'Parcours de 200 m, barre légère',rx:[['cf-run',400,'m'],['cf-overhead-squat',15,'rep',43.1,29.5]],scaled:[['cf-run',200,'m'],['cf-overhead-squat',10,'rep',20,15]]},
+ {id:'angie',name:'Angie',tag:'Quatre blocs · Poids du corps',format:'time',rounds:[1],hint:'Estimation ATLAS : 20–40 min',scaledHint:'Estimation ATLAS : 12–25 min',gear:'Barre de traction, tapis',scaledGear:'Anneaux, support stable pour les pompes, tapis',rx:[['tractions',100],['pompes',100],['cf-situp',100],['squat-corps',100]],scaled:[['cf-ring-row',50],['pompes-inclinees',50],['cf-situp',50],['squat-corps',50]]},
+ {id:'barbara',name:'Barbara',tag:'Cinq tours · Repos chronométré',format:'time',rounds:[1,1,1,1,1],scaledRounds:[1,1,1],restBetweenRounds:180,hint:'Estimation ATLAS : 30–50 min, repos inclus',scaledHint:'Estimation ATLAS : 15–25 min, repos inclus',gear:'Barre de traction, tapis',scaledGear:'Anneaux, support stable pour les pompes, tapis',rx:[['tractions',20],['pompes',30],['cf-situp',40],['squat-corps',50]],scaled:[['cf-ring-row',10],['pompes-inclinees',15],['cf-situp',20],['squat-corps',25]]}
 ];
 const CrossFitModel=(()=>{
  const get=id=>CF_WORKOUTS.find(w=>w.id===id);
@@ -29,23 +37,25 @@ const CrossFitModel=(()=>{
   if(rows.some(r=>!Number.isFinite(r.kg)||r.kg<0||r.kg>500))throw Error('Charge invalide');
   const rounds=w.format==='amrap'?[1]:(scaled?w.scaledRounds:null)||w.rounds;
   const steps=rounds.flatMap((amount,i)=>rows.map(r=>({...r,amount:r.amount==='round'?amount:r.amount,round:i+1})));
-  return {id,name:w.name,format:w.format,variant,category,rows,steps,rounds:rounds.length,time:w.format==='amrap'?(scaled?w.scaledTime:w.time):null,hint:scaled?w.scaledHint:w.hint,gear:scaled?(w.scaledGear||w.gear):w.gear,modified:rows.some(r=>r.weighted&&loads[r.id]!=null),source:'https://www.crossfit.com/benchmark/'+id};
+  return {restBetweenRounds:w.restBetweenRounds||0,targetMeters:w.target?(scaled?w.scaledTarget:w.target)[category==='female'?1:0]:null,id,name:w.name,format:w.format,variant,category,rows,steps,rounds:rounds.length,time:w.format==='amrap'?(scaled?w.scaledTime:w.time):null,hint:scaled?w.scaledHint:w.hint,gear:scaled?(w.scaledGear||w.gear):w.gear,modified:rows.some(r=>r.weighted&&loads[r.id]!=null),source:'https://www.crossfit.com/benchmark/'+id};
  }
- function create(config,now,id,avatar){return {kind:'crossfit',id,dayId:'crossfit-'+config.id,title:'CrossFit · '+config.name,date:new Date(now).toISOString(),startedAtMs:now,pausedAt:null,pausedMs:0,finishedAt:null,config:JSON.parse(JSON.stringify(config)),cursor:0,progress:0,logs:[],notes:'',avatar:avatar==='female'?'female':'male'};}
+ function create(config,now,id,avatar){return {kind:'crossfit',id,dayId:'crossfit-'+config.id,title:'CrossFit · '+config.name,date:new Date(now).toISOString(),startedAtMs:now,pausedAt:null,pausedMs:0,finishedAt:null,config:JSON.parse(JSON.stringify(config)),cursor:0,progress:0,restUntilSeconds:0,restIntervals:[],logs:[],notes:'',avatar:avatar==='female'?'female':'male'};}
  function elapsed(d,now){const end=d.finishedAt??d.pausedAt??now;const t=Math.max(0,(end-d.startedAtMs-(d.pausedMs||0))/1000);return d.config.time?Math.min(t,d.config.time):t;}
  function expired(d,now){return d.config.format==='amrap'&&elapsed(d,now)>=d.config.time;}
  function current(d){return d.config.steps[d.config.format==='amrap'?d.cursor%d.config.steps.length:d.cursor]||null;}
- function add(d,amount,now){const step=current(d);if(!step||d.pausedAt!=null||d.finishedAt!=null||expired(d,now)||!Number.isInteger(amount)||amount<1||amount>step.amount-d.progress)return false;
-  d.logs.push({...step,amount,cursor:d.cursor,previous:d.progress,round:d.config.format==='amrap'?Math.floor(d.cursor/d.config.steps.length)+1:step.round,at:now});d.progress+=amount;
-  if(d.progress===step.amount){d.cursor++;d.progress=0;}if(d.config.format==='time'&&!current(d))d.finishedAt=now;return true;
+ function restRemaining(d,now){return Math.max(0,Math.ceil((d.restUntilSeconds||0)-elapsed(d,now)));}
+ function add(d,amount,now){const step=current(d);if(!step||restRemaining(d,now)>0||d.pausedAt!=null||d.finishedAt!=null||expired(d,now)||!Number.isInteger(amount)||amount<1||amount>step.amount-d.progress)return false;
+  d.logs.push({...step,previousRestCount:(d.restIntervals||[]).length,amount,cursor:d.cursor,previous:d.progress,round:d.config.format==='amrap'?Math.floor(d.cursor/d.config.steps.length)+1:step.round,at:now});d.progress+=amount;
+  if(d.progress===step.amount){d.cursor++;d.progress=0;const next=current(d);if(next&&next.round!==step.round&&d.config.restBetweenRounds){const start=elapsed(d,now);d.restUntilSeconds=start+d.config.restBetweenRounds;(d.restIntervals||(d.restIntervals=[])).push({start,end:d.restUntilSeconds});}}if(d.config.format==='time'&&!current(d))d.finishedAt=now;return true;
  }
- function undo(d,now){if(d.pausedAt!=null||expired(d,now)||!d.logs.length)return false;const last=d.logs.pop();d.cursor=last.cursor;d.progress=last.previous;d.finishedAt=null;return true;}
+ function undo(d,now){if(d.pausedAt!=null||expired(d,now)||!d.logs.length)return false;const last=d.logs.pop();d.cursor=last.cursor;d.progress=last.previous;d.finishedAt=null;d.restUntilSeconds=0;if(d.restIntervals)d.restIntervals.length=last.previousRestCount??0;return true;}
  function pause(d,now){if(d.pausedAt==null&&d.finishedAt==null&&!expired(d,now))d.pausedAt=now;}
  function resume(d,now){if(d.pausedAt==null)return;d.pausedMs+=Math.max(0,now-d.pausedAt);d.pausedAt=null;}
  function stats(d,now){const complete=d.config.format==='amrap'?expired(d,now):!current(d);const rounds=d.config.format==='amrap'?Math.floor(d.cursor/d.config.steps.length):new Set(d.logs.filter(l=>d.cursor>d.config.steps.findLastIndex(s=>s.round===l.round)).map(l=>l.round)).size;
   const extra=d.config.format==='amrap'?d.logs.filter(l=>l.round===rounds+1).reduce((s,l)=>s+l.amount,0):0;
-  return {durationSeconds:Math.floor(elapsed(d,now)),complete,rounds,extra,reps:d.logs.filter(l=>l.unit!=='m').reduce((s,l)=>s+l.amount,0),distance:d.logs.filter(l=>l.unit==='m').reduce((s,l)=>s+l.amount,0),volumeKg:d.logs.reduce((s,l)=>s+(l.unit==='m'?0:l.kg*l.amount),0)};
+  const durationSeconds=Math.floor(elapsed(d,now)),restSeconds=Math.floor((d.restIntervals||[]).reduce((sum,r)=>sum+Math.max(0,Math.min(elapsed(d,now),r.end)-r.start),0));
+  return {durationSeconds,restSeconds,effortSeconds:durationSeconds-restSeconds,complete,rounds,extra,reps:d.logs.filter(l=>l.unit!=='m').reduce((s,l)=>s+l.amount,0),distance:d.logs.filter(l=>l.unit==='m').reduce((s,l)=>s+l.amount,0),volumeKg:d.logs.reduce((s,l)=>s+(l.unit==='m'?0:l.kg*l.amount),0)};
  }
  function finish(d,now){const exercises=[];for(const l of d.logs){let e=exercises.find(e=>e.id===l.id);if(!e){e={id:l.id,sets:[]};exercises.push(e);}e.sets.push({kg:l.kg,reps:l.unit==='m'?0:l.amount,...(l.unit==='m'?{distance:l.amount}:{})});}return {id:d.id,kind:'crossfit',dayId:d.dayId,title:d.title,date:new Date(now).toISOString(),startedAt:d.date,notes:d.notes,exercises,crossfit:{...stats(d,now),config:d.config,logs:d.logs,avatar:d.avatar}};}
- return {get,build,create,elapsed,expired,current,add,undo,pause,resume,stats,finish};
+ return {get,build,create,elapsed,expired,current,restRemaining,add,undo,pause,resume,stats,finish};
 })();
