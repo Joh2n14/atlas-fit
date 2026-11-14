@@ -1,13 +1,13 @@
 # ATLAS Fit — application de musculation personnelle
 
-Version 1.6 — Novembre 2026
+Version 1.7 — Novembre 2026
 
 Cette application est **gratuite**, sans abonnement, sans publicité, sans compte, et conçue pour iPhone, iPad et navigateur de bureau.
 
 ## Fonctionnalités
 
-- 103 exercices : 84 mouvements de musculation, 8 mouvements du programme « Après mon bébé » et 11 nouveaux mouvements CrossFit, avec conseils, recherche, filtres et favoris.
-- 103 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
+- 109 exercices : 84 mouvements de musculation, 8 mouvements du programme « Après mon bébé » et 17 nouveaux mouvements CrossFit, avec conseils, recherche, filtres et favoris.
+- 109 GIF au style 3D avec aperçus dans la bibliothèque. Ouvrir « Démo et détails », puis « Lire l’animation ». Le bouton « Arrêter l’animation » rétablit une image fixe. Les mouvements restent décomposés en quelques poses, comme le premier GIF validé.
 - Les aperçus se chargent au fil du défilement et les GIF à la demande. Les médias consultés sont conservés pour les visites hors ligne, dans la limite du stockage disponible. Si la réduction des animations est activée sur l’appareil, une image fixe est affichée au départ et la lecture manuelle reste disponible.
 - Génération d'un programme hebdomadaire de 2 à 6 séances, selon l'objectif, le niveau, la durée et le matériel.
 - Modification du programme : ajout/retrait d'exercices, nombre de séries, régénération.
@@ -31,7 +31,7 @@ Les options du bilan sont automatiques. Le genre suit le profil enregistré, mas
 
 ## CrossFit
 
-Dix séances : Cindy, Annie, Helen, Fran, Grace, Jackie, Karen, Nancy, Angie et Barbara. Chaque fiche présente durée indicative (hors échauffement), matériel, répétitions, tours et charges modifiables. Les standards sont documentés sur les pages officielles https://www.crossfit.com/benchmark/cindy, /annie, /helen, /fran, /grace, /jackie, /karen, /nancy, /angie et /barbara. Les charges en livres sont converties et arrondies en kilogrammes.
+Quinze séances : Cindy, Annie, Helen, Fran, Grace, Jackie, Karen, Nancy, Angie, Barbara, Diane, Elizabeth, Isabel, Kelly et Chelsea. Chaque fiche présente durée indicative (hors échauffement), matériel, répétitions, tours et charges modifiables. Les standards sont documentés sur les pages officielles https://www.crossfit.com/benchmark/cindy, /annie, /helen, /fran, /grace, /jackie, /karen, /nancy, /angie et /barbara. Les charges en livres sont converties et arrondies en kilogrammes.
 
 La variante « Adaptée ATLAS » est une proposition distincte de la référence. Cindy utilise 12 minutes et 3 tirages aux anneaux / 6 pompes inclinées / 9 squats ; Annie 35–25–15–10–5 sauts simples et sit-ups ; Helen 3 tours de 200 m / 15 swings à 12 ou 8 kg / 9 tirages aux anneaux ; Fran 21–15–9 thrusters à 20 ou 15 kg et tirages aux anneaux ; Grace 30 épaulés-jetés à 35 ou 25 kg. Les repères masculins et féminins restent modifiables.
 
@@ -126,3 +126,7 @@ Le programme est une proposition pratique conçue pour ATLAS Fit, pas la reprodu
 Aucune bibliothèque externe, aucun service payant et aucune clé API.
 
 Barbara : repos automatique de 180 secondes entre les tours (4 repos en référence, 2 en adaptée), aucun après le dernier. La pause fige aussi le repos. Le bilan sépare temps total et temps d’effort hors repos imposés ; les récupérations libres restent comprises dans le temps d’effort. Karen indique la hauteur de cible selon la version et le repère de charge. Les estimations ATLAS ne sont pas des limites de temps officielles.
+
+Version 1.7 : Diane, Elizabeth, Isabel, Kelly et Chelsea. Six nouveaux mouvements 3D : soulevé de terre classique, pompes en équilibre contre un mur, épaulé en squat, dips aux anneaux, arraché en puissance et saut sur box.
+Chelsea : 30 minutes (15 en adaptée), un départ par minute. Une fois la cadence dépassée, poursuite en tours libres jusqu’au terme ; tours et répétitions conservés. Pause et reprise incluent le délai avant le prochain départ. Le bilan distingue les tours réalisés dans leur minute et le passage en tours libres.
+Kelly : hauteur de box et cible indiquées par exercice ; marche basse en adaptée. Les variantes ATLAS et leurs durées estimées sont distinctes des standards de référence.

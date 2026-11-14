@@ -4,7 +4,7 @@ const CustomWorkout = (() => {
   const singleDumbbell = new Set(['rowing-halteres','pullover','curl-concentration','extension-nuque','kickback','squat-goblet','hip-thrust-halteres']);
   const alternating = new Set(['curl-halteres','curl-marteau']);
   const unilateral = new Set(['rowing-halteres','curl-concentration','kickback','fentes','fentes-halteres','bulgare','step-up','kickback-poulie','bird-dog','dead-bug','mountain-climbers','bicycle-crunch']);
-  const ascent = new Set(['cf-thruster','cf-wall-ball','cf-overhead-squat','squat-barre','front-squat','squat-goblet','squat-corps','fentes','fentes-halteres','bulgare','step-up']);
+  const ascent = new Set(['cf-squat-clean','cf-box-jump','cf-thruster','cf-wall-ball','cf-overhead-squat','squat-barre','front-squat','squat-goblet','squat-corps','fentes','fentes-halteres','bulgare','step-up']);
   const number = v => Number(String(v).replace(',','.'));
   const bounded = (v,min,max,fallback) => Number.isFinite(number(v)) ? Math.min(max,Math.max(min,number(v))) : fallback;
   function equipment(ex) {

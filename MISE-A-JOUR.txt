@@ -1,12 +1,11 @@
-ATLAS Fit 1.6 — 10 séances CrossFit et 103 exercices avec GIF 3D
+ATLAS Fit 1.7 — 15 séances CrossFit, 109 exercices avec GIF 3D
 
-Nouvelles séances : Jackie, Karen, Nancy, Angie et Barbara.
-Nouveaux mouvements : rameur, wall-ball et squat avec barre au-dessus de la tête.
-Barbara : repos automatique de trois minutes entre les tours ; temps total et temps d’effort séparés dans le bilan.
+Nouvelles séances : Diane, Elizabeth, Isabel, Kelly et Chelsea.
+Six nouveaux mouvements : soulevé de terre classique, pompes en équilibre contre un mur, épaulé en squat, dips aux anneaux, arraché en puissance, saut sur box.
+Chelsea : départ chaque minute, récupération automatique, poursuite en tours libres si la cadence est dépassée. Référence de 30 min et variante adaptée de 15 min.
 
 Dans la bibliothèque, touche un aperçu ou « Démo et détails », puis « Lire l’animation ». Le même bouton permet de revenir à l’image fixe.
 
-Pour installer une copie : transfère le contenu de ce dossier dans le dépôt de ton application, avec le dossier media complet. Conserve la même adresse pour retrouver tes données locales. Après publication, ferme puis rouvre l’application.
-
+Conserve la même adresse de publication pour retrouver tes données locales. Après publication, ferme puis rouvre l’application.
 Les GIF sont chargés à la demande et conservés pour le hors-ligne lorsque le stockage le permet.
 Aucun abonnement ni service payant n’a été ajouté.
